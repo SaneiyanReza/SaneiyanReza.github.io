@@ -13,6 +13,12 @@ html {
     height: 100%;
     font-family: 'Vazir';
 }
+.img-tab{
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 20px auto 0;
+}
 
 .text-white-75 {
     color: rgba(255, 255, 255, 0.75);
