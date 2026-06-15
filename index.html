@@ -207,17 +207,16 @@
             </div>
             <p class="timeline__location">Tehran, Iran</p>
             <ul class="timeline__list">
-              <li>Architected RESTful APIs and MediatR CQRS handlers for bulk SMS, P2P messaging, scheduled and A/B campaigns, and inbound SMS — handling 10M+ API calls/day at peaks of 1,000 req/min.</li>
-              <li>Researched and benchmarked design options for the developer sandbox; proposed a solution based on performance analysis and implemented it after team review.</li>
-              <li>Collaborated on architecture decisions for performance-critical services (dispatch, archive, Elasticsearch sync) using CQRS and event-driven patterns.</li>
-              <li>Built financial modules: credit management, invoicing, discount engine; integrated Parbad payment gateway (SDK) and Sepidar ERP for billing sync.</li>
-              <li>Integrated with multiple Iranian telecom operators (SMS carriers) via HTTP APIs and vendor SDKs as part of the core message dispatch layer.</li>
-              <li>Designed the developer API platform: API keys, IP allowlisting, per-key rate limiting, and request logging for thousands of external integrators.</li>
-              <li>Built distributed microservices (archive, report sync, file service, legacy migration) using RabbitMQ, Redis, and Hangfire.</li>
-              <li>Instrumented full observability with ELK Stack, Serilog/Seq, OpenTelemetry, and Prometheus; load-tested with JMeter; deployed via Docker Compose and GitLab CI.</li>
-              <li>Conducted code reviews for junior developers; reviewed pre-publish changes for Clean Architecture and SOLID compliance.</li>
-              <li>Delivered features in 2-week Agile/Scrum sprints (Jira, Trello, Plane); contributed to planning, estimation, and reporting.</li>
-              <li>Maintained open-source SmsPanelV2.DotNet SDK on GitHub (10+ stars, Pull Shark ×2).</li>
+              <li>Architected RESTful APIs and MediatR CQRS handlers for bulk SMS, P2P messaging, scheduled and A/B campaigns, and inbound SMS routing — the public Developer API handled <strong>8M+ requests/day</strong> from external integrators.</li>
+              <li>Designed and delivered a developer sandbox mirroring production behavior, enabling cost-free API testing without real traffic or carrier delivery, fully isolated from the live platform.</li>
+              <li>Built a plan-based access control system enforcing per-tier feature gating at scale across SMS.ir's user base.</li>
+              <li>Developed an FAQ module using Elasticsearch similarity search, enabling accurate natural-language query resolution without exact keyword matching.</li>
+              <li>Built the archive reporting service on Elasticsearch for full-text search and multi-field filtering across large datasets, with automatic SQL Server fallback when Elasticsearch was unavailable.</li>
+              <li>Executed a zero-downtime server migration using SQL Server pub/sub replication — continuous data sync to the new server with under 5 minutes of cutover downtime.</li>
+              <li>Rewrote the Hangfire-based archive service, eliminating recurring job timeouts and cutting processing time to under 5 minutes; resolved a memory leak and reduced application startup time.</li>
+              <li>Built invoicing service with Sepidar ERP sync and Parbad payment gateway integration; implemented HTTP API integrations with multiple Iranian telecom operators for message dispatch.</li>
+              <li>Conducted code reviews for junior developers, enforcing Clean Architecture and SOLID principles before every production release.</li>
+              <li>Maintained open-source <a href="https://github.com/IPeCompany/SmsPanelV2.DotNet" target="_blank">SmsPanelV2.DotNet</a> and <a href="https://github.com/IPeCompany/SmsPanelV2.DotNetFramework" target="_blank">SmsPanelV2.DotNetFramework</a> — official .NET SDKs for SMS.ir. Authored <a href="https://github.com/SaneiyanReza/smsir-cli" target="_blank">smsir-cli</a> (14 ★), a Go-based CLI for the SMS.ir API.</li>
             </ul>
             <div class="timeline__tags">
               <span class="tag">ASP.NET Core</span>
@@ -354,8 +353,6 @@
             <h3 class="skill-card__title">DevOps & CI/CD</h3>
             <div class="skill-card__tags">
               <span class="skill-tag">Docker</span>
-              <span class="skill-tag">Docker Compose</span>
-              <span class="skill-tag">GitLab CI</span>
             </div>
           </div>
           <div class="skill-card reveal">
@@ -364,8 +361,6 @@
             <div class="skill-card__tags">
               <span class="skill-tag">ELK Stack</span>
               <span class="skill-tag">Serilog</span>
-              <span class="skill-tag">OpenTelemetry</span>
-              <span class="skill-tag">Prometheus</span>
               <span class="skill-tag">JMeter</span>
               <span class="skill-tag">Postman</span>
               <span class="skill-tag">xUnit</span>
